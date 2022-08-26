@@ -15,6 +15,7 @@ import { registerLocaleData } from '@angular/common';
 import { ClienteService } from './clientes/cliente.service';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { DetalleComponent } from './clientes/detalle/detalle.component';
+import { LoginComponent } from './usuarios/login.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'clientes/page/:page', component: ClientesComponent },
   { path: 'clientes/form', component: FormComponent },
   { path: 'clientes/form/:id', component: FormComponent },
+  { path: 'login', component: LoginComponent }
 ]
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ const routes: Routes = [
     ClientesComponent,
     FormComponent,
     PaginatorComponent,
-    DetalleComponent
+    DetalleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
